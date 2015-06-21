@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pSj-JI-pW4">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--User Profile-->
+        <scene sceneID="yrT-lZ-ppc">
+            <objects>
+                <navigationController id="TMD-ek-xzv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="User Profile" id="uuE-W7-UBu"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="pYF-6L-UXn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eBO-d1-ajZ" kind="relationship" relationship="rootViewController" id="38b-Sj-JFW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g0G-ra-5Hd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-552" y="133"/>
+        </scene>
+        <!--User Profile-->
+        <scene sceneID="vpx-5r-BF9">
+            <objects>
+                <viewController id="eBO-d1-ajZ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EoO-KB-4bh"/>
+                        <viewControllerLayoutGuide type="bottom" id="cZO-9D-gCd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XaS-Du-cjZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="User Profile" id="quC-pP-REL">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="dtr-aA-Fqw"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Pp-fu-Bf8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="99" y="133"/>
+        </scene>
+        <!--Measure Heart Beat-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="MeasurePulseUIViewController" customModule="Pulsymetrics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Microsoft Band!!!" translatesAutoresizingMaskIntoConstraints="NO" id="mte-Vw-FW2">
+                                <rect key="frame" x="16" y="92" width="568" height="375"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEm-wn-EOI">
+                                <rect key="frame" x="16" y="8" width="568" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Measure">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="runExampleCode:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FsR-XC-ZJr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hearbeat Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v71-fe-lpc">
+                                <rect key="frame" x="16" y="57" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Wd8-vH-ifR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="v71-fe-lpc" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="FeL-lb-VFj"/>
+                            <constraint firstItem="v71-fe-lpc" firstAttribute="leading" secondItem="sEm-wn-EOI" secondAttribute="leading" id="FsI-If-y7E"/>
+                            <constraint firstItem="mte-Vw-FW2" firstAttribute="top" secondItem="v71-fe-lpc" secondAttribute="bottom" constant="14" id="GSe-S4-Tbg"/>
+                            <constraint firstItem="v71-fe-lpc" firstAttribute="leading" secondItem="mte-Vw-FW2" secondAttribute="leading" id="XaX-p2-emn"/>
+                            <constraint firstItem="sEm-wn-EOI" firstAttribute="trailing" secondItem="v71-fe-lpc" secondAttribute="trailing" id="aAl-gu-VLj"/>
+                            <constraint firstItem="sEm-wn-EOI" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="bZw-uA-vke"/>
+                            <constraint firstItem="v71-fe-lpc" firstAttribute="top" secondItem="sEm-wn-EOI" secondAttribute="bottom" constant="19" id="duf-jU-nqF"/>
+                            <constraint firstAttribute="bottom" secondItem="mte-Vw-FW2" secondAttribute="bottom" constant="20" symbolic="YES" id="fTl-dP-tah"/>
+                            <constraint firstItem="v71-fe-lpc" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="ny2-qP-tQ4"/>
+                            <constraint firstItem="mte-Vw-FW2" firstAttribute="trailing" secondItem="v71-fe-lpc" secondAttribute="trailing" id="uqX-p4-95a"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Measure Heart Beat" id="rwo-nI-3Mi">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="Ky6-po-EyO"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="hearbeatLabel" destination="v71-fe-lpc" id="bYx-fr-T45"/>
+                        <outlet property="txtOutput" destination="mte-Vw-FW2" id="P7j-T7-zxK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="99" y="841"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="csy-Fj-OM0">
+            <objects>
+                <tabBarController id="pSj-JI-pW4" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="Hdp-kq-k80">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="TMD-ek-xzv" kind="relationship" relationship="viewControllers" id="tYg-NL-DUe"/>
+                        <segue destination="Bkf-RT-KCr" kind="relationship" relationship="viewControllers" id="mcg-py-JD0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F7m-gc-p8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1294" y="470"/>
+        </scene>
+        <!--Heart Beat History-->
+        <scene sceneID="dG8-JP-jWI">
+            <objects>
+                <navigationController id="Bkf-RT-KCr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Heart Beat History" id="w61-DE-9Th"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="rpn-7f-RF7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="wz1-Sd-Wdd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EEo-ii-wHZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-552" y="841"/>
+        </scene>
+    </scenes>
+</document>
