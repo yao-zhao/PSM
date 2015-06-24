@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pSj-JI-pW4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--User Profile-->
@@ -27,7 +26,7 @@
         <!--User Profile-->
         <scene sceneID="vpx-5r-BF9">
             <objects>
-                <viewController id="eBO-d1-ajZ" sceneMemberID="viewController">
+                <viewController id="eBO-d1-ajZ" customClass="UserProfileUIViewController" customModule="Pulsymetrics" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EoO-KB-4bh"/>
                         <viewControllerLayoutGuide type="bottom" id="cZO-9D-gCd"/>
@@ -57,55 +56,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Microsoft Band!!!" translatesAutoresizingMaskIntoConstraints="NO" id="mte-Vw-FW2">
-                                <rect key="frame" x="16" y="92" width="568" height="375"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEm-wn-EOI">
-                                <rect key="frame" x="16" y="8" width="568" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Measure">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <rect key="frame" x="10" y="427" width="580" height="50"/>
+                                <color key="backgroundColor" red="0.46668370111953972" green="0.73021004255335198" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="z3N-xW-mLh"/>
+                                </constraints>
+                                <color key="tintColor" red="0.011610009215430461" green="0.018165934021065661" blue="0.024877683080808066" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Title"/>
                                 <connections>
-                                    <action selector="runExampleCode:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FsR-XC-ZJr"/>
+                                    <action selector="ButtonAction:" destination="vXZ-lx-hvc" eventType="touchDown" id="SMb-d9-L0K"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hearbeat Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v71-fe-lpc">
-                                <rect key="frame" x="16" y="57" width="568" height="21"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ATs-AI-vxv" customClass="BarChartUIView" customModule="Pulsymetrics" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="580" height="407"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="1" green="0.74085137332593898" blue="0.40394730231285059" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" red="1" green="0.19718327862287222" blue="0.32371438757958582" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="vkd-3j-dui">
+                                <rect key="frame" x="260" y="174" width="80" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Wd8-vH-ifR"/>
+                                    <constraint firstAttribute="height" constant="80" id="3fQ-o5-ORt"/>
+                                    <constraint firstAttribute="width" constant="80" id="ILg-Kg-TYc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="v71-fe-lpc" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="FeL-lb-VFj"/>
-                            <constraint firstItem="v71-fe-lpc" firstAttribute="leading" secondItem="sEm-wn-EOI" secondAttribute="leading" id="FsI-If-y7E"/>
-                            <constraint firstItem="mte-Vw-FW2" firstAttribute="top" secondItem="v71-fe-lpc" secondAttribute="bottom" constant="14" id="GSe-S4-Tbg"/>
-                            <constraint firstItem="v71-fe-lpc" firstAttribute="leading" secondItem="mte-Vw-FW2" secondAttribute="leading" id="XaX-p2-emn"/>
-                            <constraint firstItem="sEm-wn-EOI" firstAttribute="trailing" secondItem="v71-fe-lpc" secondAttribute="trailing" id="aAl-gu-VLj"/>
-                            <constraint firstItem="sEm-wn-EOI" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="bZw-uA-vke"/>
-                            <constraint firstItem="v71-fe-lpc" firstAttribute="top" secondItem="sEm-wn-EOI" secondAttribute="bottom" constant="19" id="duf-jU-nqF"/>
-                            <constraint firstAttribute="bottom" secondItem="mte-Vw-FW2" secondAttribute="bottom" constant="20" symbolic="YES" id="fTl-dP-tah"/>
-                            <constraint firstItem="v71-fe-lpc" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="ny2-qP-tQ4"/>
-                            <constraint firstItem="mte-Vw-FW2" firstAttribute="trailing" secondItem="v71-fe-lpc" secondAttribute="trailing" id="uqX-p4-95a"/>
+                            <constraint firstItem="ATs-AI-vxv" firstAttribute="centerX" secondItem="vkd-3j-dui" secondAttribute="centerX" id="1l5-0c-88n"/>
+                            <constraint firstItem="sEm-wn-EOI" firstAttribute="top" secondItem="ATs-AI-vxv" secondAttribute="bottom" constant="10" id="8wd-9l-MlN"/>
+                            <constraint firstItem="ATs-AI-vxv" firstAttribute="centerY" secondItem="vkd-3j-dui" secondAttribute="centerY" id="LDV-G4-nz7"/>
+                            <constraint firstAttribute="trailing" secondItem="sEm-wn-EOI" secondAttribute="trailing" constant="10" id="bd5-fN-jZh"/>
+                            <constraint firstAttribute="trailing" secondItem="ATs-AI-vxv" secondAttribute="trailing" constant="10" id="mwd-dD-jwq"/>
+                            <constraint firstItem="ATs-AI-vxv" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="10" id="n6J-cK-uql"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="sEm-wn-EOI" secondAttribute="bottom" constant="10" id="qbJ-W7-9bc"/>
+                            <constraint firstItem="sEm-wn-EOI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="xIe-c0-fpc"/>
+                            <constraint firstItem="ATs-AI-vxv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="zo0-ef-8C7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Measure Heart Beat" id="rwo-nI-3Mi">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="Ky6-po-EyO"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="hearbeatLabel" destination="v71-fe-lpc" id="bYx-fr-T45"/>
-                        <outlet property="txtOutput" destination="mte-Vw-FW2" id="P7j-T7-zxK"/>
+                        <outlet property="ActivityIndicator" destination="vkd-3j-dui" id="mdG-Yq-bbh"/>
+                        <outlet property="BarChart" destination="ATs-AI-vxv" id="e0g-ly-17g"/>
+                        <outlet property="StatusButton" destination="sEm-wn-EOI" id="Ve7-YM-yWO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3B5C3C391B35E3EB00B813B0 /* UserProfileUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C3C381B35E3EB00B813B0 /* UserProfileUIViewController.swift */; };
+		3B880CB81B37317F00087CEB /* BarChartUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B880CB71B37317F00087CEB /* BarChartUIView.swift */; };
 		3BF68C1B1B362F9D00C16353 /* MicrosoftBandKit_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF68C1A1B362F9D00C16353 /* MicrosoftBandKit_iOS.framework */; };
 		9331C4E31AD5001D001A4E69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9331C4E21AD5001D001A4E69 /* AppDelegate.swift */; };
 		9331C4E51AD5001D001A4E69 /* MeasurePulseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9331C4E41AD5001D001A4E69 /* MeasurePulseUIViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		3B5C3C381B35E3EB00B813B0 /* UserProfileUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileUIViewController.swift; sourceTree = "<group>"; };
+		3B880CB71B37317F00087CEB /* BarChartUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartUIView.swift; sourceTree = "<group>"; };
 		3BF68C1A1B362F9D00C16353 /* MicrosoftBandKit_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MicrosoftBandKit_iOS.framework; sourceTree = "<group>"; };
 		3BF68C1E1B36303000C16353 /* BandSensorSwift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BandSensorSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		9331C4DD1AD5001D001A4E69 /* Pulsymetrics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pulsymetrics.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +69,7 @@
 				3BF68C1E1B36303000C16353 /* BandSensorSwift-Bridging-Header.h */,
 				9331C4E21AD5001D001A4E69 /* AppDelegate.swift */,
 				9331C4E41AD5001D001A4E69 /* MeasurePulseUIViewController.swift */,
+				3B880CB71B37317F00087CEB /* BarChartUIView.swift */,
 				9331C4E61AD5001D001A4E69 /* Main.storyboard */,
 				3B5C3C381B35E3EB00B813B0 /* UserProfileUIViewController.swift */,
 				9331C4E91AD5001D001A4E69 /* Images.xcassets */,
@@ -167,6 +170,7 @@
 				9331C4E51AD5001D001A4E69 /* MeasurePulseUIViewController.swift in Sources */,
 				9331C4E31AD5001D001A4E69 /* AppDelegate.swift in Sources */,
 				3B5C3C391B35E3EB00B813B0 /* UserProfileUIViewController.swift in Sources */,
+				3B880CB81B37317F00087CEB /* BarChartUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
